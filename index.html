@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina Leal | Portfólio Profissional - Tecnóloga em Radiologia</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0f766e;
+            --primary-dark: #115e59;
+            --primary-light: #ccfbf1;
+            --primary-subtle: #f0fdfa;
+            --accent: #0284c7;
+            --accent-subtle: #e0f2fe;
+            --dark: #0f172a;
+            --text: #334155;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 25px rgba(15, 118, 110, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* NAVBAR / CABEÇALHO DO SITE */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .brand-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 8px rgba(15, 118, 110, 0.25);
+        }
+
+        .brand-text h2 {
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-text span {
+            font-size: 11.5px;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 14.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn {
+            background-color: var(--primary);
+            color: #ffffff !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(15, 118, 110, 0.2);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 0 60px 0;
+            background: linear-gradient(180deg, #ffffff 0%, var(--bg-page) 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--dark);
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 580px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary);
+            color: #ffffff;
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 9px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .btn-main:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #ffffff;
+            color: var(--dark);
+            border: 1px solid var(--border);
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: 9px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+
+        .hero-socials {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hero-socials span {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-subtle);
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 17px;
+            height: 17px;
+        }
+
+        /* CARD DESTAQUE PERFIL HERO */
+        .hero-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 18px auto;
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: 800;
+            color: #ffffff;
+            border: 4px solid var(--primary-light);
+            box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2);
+            overflow: hidden;
+        }
+
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .hero-card h3 {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .hero-card-tag {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .stat-item p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* SEÇÕES GERAIS */
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px auto;
+        }
+
+        .section-badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--primary-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* SEÇÃO SOBRE MIM */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 15.5px;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .about-pillars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .pillar-box {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .pillar-box h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pillar-box p {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* FORMAÇÃO ACADÊMICA CARD */
+        .education-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .education-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .edu-item {
+            margin-bottom: 18px;
+            position: relative;
+            padding-left: 18px;
+            border-left: 2px solid var(--primary-light);
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-year {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            background: var(--primary-light);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .edu-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .edu-desc {
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        /* SEÇÃO DE EQUIPAMENTOS & ESPECIALIDADES */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .equipment-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .equipment-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: var(--primary-subtle);
+            border: 1px solid #99f6e4;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .equipment-card h4 {
+            font-size: 16.5px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .equipment-card p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .mini-tag {
+            font-size: 11.5px;
+            font-weight: 600;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* SEÇÃO DE PROJETOS EM DESTAQUE (PORTFÓLIO CASE) */
+        .project-showcase {
+            background: #ffffff;
+            border: 1.5px solid #ccfbf1;
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .showcase-badge {
+            background: #f0fdfa;
+            color: var(--primary-dark);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #99f6e4;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .showcase-date {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .showcase-title {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.3;
+            margin-bottom: 14px;
+        }
+
+        .showcase-desc {
+            font-size: 15px;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+
+        .showcase-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-bottom: 24px;
+            background: var(--bg-page);
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .highlight-item h6 {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 3px;
+        }
+
+        .highlight-item p {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* SEÇÃO TRAJETÓRIA HOSPITALAR */
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .experience-box {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .experience-box:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .exp-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .exp-role {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .exp-place {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .exp-tasks-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-tasks-list li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 14px;
+            color: var(--text);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .exp-tasks-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        /* PERGUNTAS FREQUENTES (FAQ PARA RECRUTADORES) */
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .faq-question {
+            padding: 18px 22px;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.25s ease;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 22px 18px 22px;
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* FORMULÁRIO DE CONTATO RÁPIDO */
+        .contact-card-box {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: var(--shadow-md);
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--text);
+            background: #f8fafc;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #ffffff;
+        }
+
+        /* SEÇÃO DE CONTATO / FOOTER CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, #0f766e 0%, #1e293b 100%);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            margin: 40px 0 60px 0;
+        }
+
+        .contact-cta h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .contact-cta p {
+            font-size: 16px;
+            color: #ccfbf1;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn-cta-whatsapp {
+            background-color: #25d366;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 14px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-cta-whatsapp:hover {
+            transform: translateY(-2px);
+            background-color: #1ebd5a;
+        }
+
+        .btn-cta-linkedin {
+            background-color: #0077b5;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 14px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-cta-linkedin:hover {
+            transform: translateY(-2px);
+            background-color: #005f93;
+        }
+
+        .btn-cta-copy {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 14px 22px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-cta-copy:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .contact-details-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #e2e8f0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 25px;
+        }
+
+        .contact-details-grid a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            text-align: center;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        /* TOAST COPIADO */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #0f172a;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            display: none;
+            z-index: 2000;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                margin: 0 auto 25px auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-socials {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR NAVEGAÇÃO -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand">
+                <div class="brand-badge">SL</div>
+                <div class="brand-text">
+                    <h2>Sabrina Leal</h2>
+                    <span>Tecnóloga em Radiologia</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+                <li><a href="#equipamentos" class="nav-link">Especialidades</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#atuacao" class="nav-link">Vivência Prática</a></li>
+                <li><a href="#faq" class="nav-link">Dúvidas Rápidas</a></li>
+                <li><a href="#contato" class="nav-link nav-btn">Fale Comigo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (APRESENTAÇÃO PESSOAL) -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-status">
+                    <span class="status-dot"></span>
+                    Disponível para Atuação & Oportunidades Hospitalares
+                </div>
+
+                <h1>Olá, sou a <span>Sabrina Leal</span></h1>
+                <p>
+                    Tecnóloga em Radiologia e Pós-graduanda em Ressonância Magnética e Tomografia Computadorizada.
+                    Experiência prática na operação de <strong>Arco Cirúrgico (Arco C)</strong>, <strong>Raio-X
+                        Móvel</strong> e <strong>Raio-X Fixo</strong> em ambiente de urgência, centro cirúrgico e UTI.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn-main">
+                        Ver Projetos & Casos
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#contato" class="btn-secondary">
+                        Entrar em Contato
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <span>Conecte-se comigo:</span>
+                    <!-- LinkedIn -->
+                    <a href="https://br.linkedin.com/in/sabrinaoleal" class="social-link" target="_blank"
+                        rel="noopener noreferrer" title="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.81a1.63 1.63 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63 0-.9-.73-1.63-1.63-1.63Z" />
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/sabrinaoleal" class="social-link" target="_blank"
+                        rel="noopener noreferrer" title="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5571987654321" class="social-link" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Visual com Foto / Avatar -->
+            <div class="hero-card">
+                <div class="hero-avatar" onclick="document.getElementById('uploadPhoto').click()" style="cursor: pointer;" title="Clique para escolher uma foto do seu computador">
+                    <img src="foto.jpg" alt="Sabrina Leal" id="photoTag"
+                        onload="document.getElementById('initialsText').style.display='none'; this.style.display='block';"
+                        onerror="this.style.display='none'; document.getElementById('initialsText').style.display='block';">
+                    <span id="initialsText">SL</span>
+                </div>
+                <input type="file" id="uploadPhoto" accept="image/*" style="display:none;" onchange="previewPhoto(event)">
+                <div style="margin-bottom: 12px;">
+                    <button type="button" onclick="document.getElementById('uploadPhoto').click()" style="background: none; border: none; color: var(--primary); font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;">
+                        📷 Carregar foto do computador
+                    </button>
+                </div>
+                <h3>Sabrina Leal</h3>
+                <div class="hero-card-tag">Tecnóloga em Radiologia • Lauro de Freitas / Salvador - BA</div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h4>HGRS & UPA</h4>
+                        <p>Vivência Prática</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Arco C & TC</h4>
+                        <p>Foco Clínico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO SOBRE MIM -->
+    <section class="section" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sobre Mim</span>
+                <h2 class="section-title">Dedicação Técnica com Olhar Humanizado</h2>
+                <p class="section-desc">Conheça minha trajetória, visão profissional e compromisso com o diagnóstico por
+                    imagem seguro.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Minha paixão pela radiologia une o fascínio pela tecnologia médica de alta precisão ao compromisso
+                        genuíno com o cuidado às pessoas. Através da imagem, conseguimos enxergar o que os olhos não veem e
+                        oferecer respostas cruciais para a recuperação da saúde.
+                    </p>
+                    <p>
+                        Desenvolvi minha experiência em grandes centros de saúde da Bahia, atuando no <strong>Hospital
+                            Geral Roberto Santos</strong> e na <strong>UPA de Itinga</strong>, lidando diretamente com
+                        pacientes críticos, politraumatizados e procedimentos cirúrgicos complexos com Arco Cirúrgico e
+                        Raio-X móvel em leito.
+                    </p>
+
+                    <div class="about-pillars">
+                        <div class="pillar-box">
+                            <h5>🛡️ Princípio ALARA</h5>
+                            <p>Rigidez nas diretrizes de radioproteção para reduzir a dose de radiação ao mínimo com a
+                                melhor nitidez de imagem.</p>
+                        </div>
+                        <div class="pillar-box">
+                            <h5>🤝 Humanização</h5>
+                            <p>Acolhimento calmo e empático a idosos, crianças e pacientes em momentos vulneráveis de dor e
+                                ansiedade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formação Acadêmica -->
+                <div class="education-card">
+                    <h4>Formação & Pós-Graduação</h4>
+
+                    <div class="edu-item">
+                        <span class="edu-year">Previsão 2027</span>
+                        <div class="edu-title">Pós-Graduação em Ressonância Magnética e Tomografia Computadorizada</div>
+                        <div class="edu-desc">Especialização Lato Sensu focada em cortes seccionais, contraste e alta
+                            tecnologia diagnóstica.</div>
+                    </div>
+
+                    <div class="edu-item">
+                        <span class="edu-year">Formada em 2025</span>
+                        <div class="edu-title">Tecnologia em Radiologia</div>
+                        <div class="edu-desc">Graduação Superior com base científica em física das radiações, anatomia e
+                            técnicas radiográficas.</div>
+                    </div>
+
+                    <div class="edu-item" style="border-left-color: #cbd5e1;">
+                        <span class="edu-year" style="background: #f1f5f9; color: #475569;">Certificações</span>
+                        <div class="edu-title">Proteção Radiológica & BLS</div>
+                        <div class="edu-desc">Diretrizes da CNEN e Suporte Básico de Vida para atendimento de emergência.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO EQUIPAMENTOS & ESPECIALIDADES -->
+    <section class="section" id="equipamentos"
+        style="background-color: #ffffff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Competências Práticas</span>
+                <h2 class="section-title">Equipamentos & Modalidades Dominadas</h2>
+                <p class="section-desc">Domínio das principais tecnologias de diagnóstico por imagem utilizadas na rotina
+                    hospitalar.</p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1: Arco C -->
+                <div class="equipment-card">
+                    <div class="card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h4>Arco Cirúrgico (Arco C)</h4>
+                    <p>Operação no Centro Cirúrgico em intervenções ortopédicas e vasculares guiadas por fluoroscopia
+                        contínua e pulsada com total radioproteção da equipe.</p>
+                    <div class="tag-list">
+                        <span class="mini-tag">Centro Cirúrgico</span>
+                        <span class="mini-tag">Fluoroscopia</span>
+                        <span class="mini-tag">Ortopedia</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Raio-X Móvel -->
+                <div class="equipment-card">
+                    <div class="card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5" />
+                        </svg>
+                    </div>
+                    <h4>Raio-X Móvel (Leito & UTI)</h4>
+                    <p>Realização ágil de radiografias em enfermarias e Unidades de Terapia Intensiva com pacientes
+                        acamados e sob ventilação mecânica.</p>
+                    <div class="tag-list">
+                        <span class="mini-tag">UTI</span>
+                        <span class="mini-tag">Beira do Leito</span>
+                        <span class="mini-tag">Pacientes Críticos</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Raio-X Fixo -->
+                <div class="equipment-card">
+                    <div class="card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                        </svg>
+                    </div>
+                    <h4>Raio-X Fixo Digital</h4>
+                    <p>Atendimento de alto volume na rotina de pronto-socorro e ambulatório, aplicando as incidências
+                        anatômicas corretas para diagnóstico assertivo.</p>
+                    <div class="tag-list">
+                        <span class="mini-tag">Urgência</span>
+                        <span class="mini-tag">Esqueleto Axial</span>
+                        <span class="mini-tag">Tórax & Abdome</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Tomografia & Ressonância -->
+                <div class="equipment-card">
+                    <div class="card-icon">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h4>Tomografia (TC) & RM</h4>
+                    <p>Formação em cortes tomográficos seccionais, protocolos de varredura helicoidal, reconstruções e
+                        física das sequências de ressonância.</p>
+                    <div class="tag-list">
+                        <span class="mini-tag">Pós-Graduação</span>
+                        <span class="mini-tag">PACS / DICOM</span>
+                        <span class="mini-tag">Reconstrução 3D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PROJETOS EM DESTAQUE (PORTFÓLIO CASE) -->
+    <section class="section" id="projetos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Portfólio em Foco</span>
+                <h2 class="section-title">Ações & Projetos Desenvolvidos</h2>
+                <p class="section-desc">Projetos com impacto social, comunitário e educacional na área da saúde.</p>
+            </div>
+
+            <!-- Projeto em Destaque -->
+            <div class="project-showcase">
+                <div class="showcase-top">
+                    <div class="showcase-badge">
+                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        Projeto de Extensão Universitária
+                    </div>
+                    <span class="showcase-date">abr. de 2023 - abr. de 2023</span>
+                </div>
+
+                <h3 class="showcase-title">A Importância da Radiologia na Prevenção e Diagnóstico de Doenças</h3>
+
+                <p class="showcase-desc">
+                    Projeto de extensão realizado em uma unidade de saúde, especialmente voltado ao grupo de fisioterapia
+                    para idosos. A ação teve como objetivo principal promover a conscientização sobre o papel essencial da
+                    radiologia na prevenção e diagnóstico precoce de diversas patologias que afetam a população idosa.
+                    Apresentei uma palestra com linguagem acessível e desmistificadora, explicando o funcionamento dos
+                    exames de imagem, sua importância no acompanhamento clínico e na melhora da qualidade de vida dos
+                    pacientes. O projeto reforçou práticas de educação em saúde, humanização e valorização do atendimento
+                    multidisciplinar.
+                </p>
+
+                <div class="showcase-highlights">
+                    <div class="highlight-item">
+                        <h6>Público Alvo</h6>
+                        <p>Grupo de idosos em reabilitação motora e fisioterapia.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h6>Metodologia</h6>
+                        <p>Palestra interativa, didática e esclarecimento de dúvidas.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h6>Impacto Gerado</h6>
+                        <p>Redução do receio de exames e valorização da prevenção.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h6>Competências</h6>
+                        <p>Comunicação acessível, empatia e saúde comunitária.</p>
+                    </div>
+                </div>
+
+                <div class="tag-list">
+                    <span class="mini-tag" style="background:#ccfbf1; color:#0f766e; font-weight:700;">Educação em
+                        Saúde</span>
+                    <span class="mini-tag">Saúde Geriátrica</span>
+                    <span class="mini-tag">Prevenção Clínica</span>
+                    <span class="mini-tag">Atendimento Humanizado</span>
+                    <span class="mini-tag">Multidisciplinaridade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO VIVÊNCIA PRÁTICA (HOSPITAIS) -->
+    <section class="section" id="atuacao" style="background-color: #ffffff; border-top: 1px solid var(--border);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Trajetória Clínica</span>
+                <h2 class="section-title">Vivência em Ambiente Hospitalar</h2>
+                <p class="section-desc">Experiência prática adquirida em instituições de grande porte e alta
+                    complexidade na Bahia.</p>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Hospital Roberto Santos -->
+                <div class="experience-box">
+                    <div class="exp-header">
+                        <span class="exp-role">Estagiária em Radiologia (Voluntária)</span>
+                        <span
+                            style="font-size:12.5px; font-weight:700; color:var(--primary); background:#e6fffa; padding:3px 10px; border-radius:12px;">2024
+                            - 2025</span>
+                    </div>
+                    <div class="exp-place">Hospital Geral Roberto Santos (HGRS) • Salvador - BA</div>
+
+                    <div class="tag-list" style="margin-bottom: 14px;">
+                        <span class="mini-tag" style="background:#dbeafe; color:#1d4ed8; font-weight:700;">⚡ Arco
+                            Cirúrgico (Arco C)</span>
+                        <span class="mini-tag" style="background:#dbeafe; color:#1d4ed8; font-weight:700;">⚡ Raio-X
+                            Móvel (Leito / UTI)</span>
+                        <span class="mini-tag" style="background:#dbeafe; color:#1d4ed8; font-weight:700;">⚡ Raio-X
+                            Fixo</span>
+                        <span class="mini-tag">Tomografia Computadorizada</span>
+                        <span class="mini-tag">PACS / RIS</span>
+                    </div>
+
+                    <ul class="exp-tasks-list">
+                        <li><strong>Operação de Arco Cirúrgico (Arco C):</strong> Suporte direto em cirurgias
+                            ortopédicas de fraturas e procedimentos vasculares no Bloco Cirúrgico, fornecendo imagens
+                            fluoroscópicas dinâmicas em tempo real.</li>
+                        <li><strong>Raio-X Móvel em UTI e Enfermarias:</strong> Posicionamento e execução de exames
+                            radiológicos no leito em pacientes acamados e críticos com segurança e isolamento de dose.
+                        </li>
+                        <li><strong>Rotina de Raio-X Fixo:</strong> Alto volume de exames de emergência no
+                            pronto-socorro e ambulatório com foco em qualidade técnica e ausência de repetições.</li>
+                        <li><strong>Gerenciamento no PACS:</strong> Conferência minuciosa dos dados do paciente e envio
+                            imediato das imagens para o laudo médico.</li>
+                    </ul>
+                </div>
+
+                <!-- UPA de Itinga -->
+                <div class="experience-box">
+                    <div class="exp-header">
+                        <span class="exp-role">Estagiária em Radiologia (Voluntária)</span>
+                        <span
+                            style="font-size:12.5px; font-weight:700; color:var(--primary); background:#e6fffa; padding:3px 10px; border-radius:12px;">2024</span>
+                    </div>
+                    <div class="exp-place">Unidade de Pronto Atendimento (UPA) - Itinga • Lauro de Freitas - BA</div>
+
+                    <ul class="exp-tasks-list">
+                        <li>Atuação em plantões de urgência e emergência com alto fluxo de pacientes politraumatizados,
+                            idosos e pediátricos.</li>
+                        <li>Agilidade nas incidências radiográficas para subsidiar condutas médicas imediatas na sala
+                            vermelha e amarela.</li>
+                        <li>Controle e higienização constante dos acessórios plumbíferos (protetores de tireoide e
+                            aventais).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FAQ / DÚVIDAS RÁPIDAS DE RECRUTADORES -->
+    <section class="section" id="faq" style="background-color: var(--bg-page); border-top: 1px solid var(--border);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Dúvidas Rápidas</span>
+                <h2 class="section-title">Perguntas Frequentes para Recrutadores</h2>
+                <p class="section-desc">Respostas diretas sobre disponibilidade, setores e habilitação profissional.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quais setores hospitalares tenho aptidão imediata para atuar?</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Tenho vivência prática comprovada em <strong>Centro Cirúrgico</strong> operando Arco C (fluoroscopia intraoperatória), <strong>UTI e Enfermarias</strong> com Raio-X Móvel, <strong>Pronto-Socorro e Ambulatório</strong> com Raio-X Fixo, além de aprofundamento acadêmico em <strong>Tomografia Computadorizada e Ressonância Magnética</strong>.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Qual a disponibilidade de horário e região de atuação?</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Disponibilidade total para atuação em <strong>Lauro de Freitas, Salvador e Região Metropolitana</strong>, tanto em escalas de plantão 12x36 (diurno ou noturno) quanto em regime diarista em clínicas e hospitais.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Qual o maior diferencial do meu perfil profissional?</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer">
+                        O equilíbrio entre o rigor técnico inegociável (Princípio ALARA, dosimetria, biossegurança e agilidade) e o acolhimento humanizado de pacientes geriátricos, pediátricos ou de emergência, garantindo exames nítidos sem repetições desnecessárias.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO COM FORMULÁRIO DE ENVIO RÁPIDO -->
+    <section class="container" id="contato">
+        <div class="contact-cta">
+            <h2>Vamos Conversar?</h2>
+            <p>
+                Estou pronta para somar à equipe de radiologia da sua instituição. Envie uma mensagem rápida pelo WhatsApp ou LinkedIn!
+            </p>
+
+            <!-- Card com Formulário Interativo -->
+            <div class="contact-card-box">
+                <div class="form-group">
+                    <label for="senderName">Seu Nome / Instituição ou Hospital:</label>
+                    <input type="text" id="senderName" class="form-control" placeholder="Ex: Dra. Mariana / Hospital Aliança">
+                </div>
+
+                <div class="form-group">
+                    <label for="senderMsg">Mensagem ou Oportunidade:</label>
+                    <textarea id="senderMsg" class="form-control" rows="3" placeholder="Olá Sabrina, vi seu portfólio e gostaria de agendar uma entrevista..."></textarea>
+                </div>
+
+                <button class="btn-cta-whatsapp" style="width:100%; justify-content:center; border:none; cursor:pointer;" onclick="sendWhatsAppMessage()">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 012.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.59c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+                    Enviar Mensagem no WhatsApp
+                </button>
+            </div>
+
+            <div class="contact-buttons">
+                <a href="https://br.linkedin.com/in/sabrinaoleal" class="btn-cta-linkedin" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.81a1.63 1.63 0 0 0-1.63 1.63c0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63 0-.9-.73-1.63-1.63-1.63Z" />
+                    </svg>
+                    Acessar LinkedIn
+                </a>
+
+                <button class="btn-cta-copy" onclick="copyContact()">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    Copiar Todos os Contatos
+                </button>
+            </div>
+
+            <div class="contact-details-grid">
+                <div>📍 Itinga, Lauro de Freitas - BA</div>
+                <div>📞 <a href="tel:71987654321">(71) 98765-4321</a></div>
+                <div>✉️ <a href="mailto:sabrinaleal@gmail.com">sabrinaleal@gmail.com</a></div>
+                <div>📸 <a href="https://instagram.com/sabrinaoleal" target="_blank"
+                        rel="noopener noreferrer">@sabrinaoleal</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Sabrina Leal • Portfólio Profissional de Tecnóloga em Radiologia</p>
+        </div>
+    </footer>
+
+    <!-- AVISO TOAST -->
+    <div class="toast" id="toast">Dados de contato copiados com sucesso!</div>
+
+    <script>
+        function previewPhoto(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById('photoTag');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    document.getElementById('initialsText').style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+
+        function sendWhatsAppMessage() {
+            const name = document.getElementById('senderName').value.trim();
+            const msg = document.getElementById('senderMsg').value.trim();
+            
+            let text = "Olá Sabrina, vi o seu portfólio profissional!";
+            if (name) {
+                text += ` Meu nome é ${name}.`;
+            }
+            if (msg) {
+                text += ` ${msg}`;
+            }
+
+            const encoded = encodeURIComponent(text);
+            window.open(`https://wa.me/5571987654321?text=${encoded}`, '_blank');
+        }
+
+        function copyContact() {
+            const contactText = `Sabrina Leal - Tecnóloga em Radiologia
+LinkedIn: https://br.linkedin.com/in/sabrinaoleal
+Instagram: https://instagram.com/sabrinaoleal
+WhatsApp: (71) 98765-4321
+E-mail: sabrinaleal@gmail.com
+Localização: Itinga, Lauro de Freitas - BA`;
+
+            navigator.clipboard.writeText(contactText).then(() => {
+                const toast = document.getElementById('toast');
+                toast.style.display = 'block';
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 3000);
+            }).catch(err => {
+                console.error("Erro ao copiar contatos: ", err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
